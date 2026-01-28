@@ -3,24 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration form</title>
+  <title>Forms</title>
 </head>
 <body>
-  <label for="name">Full Name:</label><br>
-  <input type="text" id="name" name="name" placeholder="Enter your name"><br>
-  <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email" placeholder="Enter email address"><br>
-  <label for="Password">Password:</label><br>
-  <input type="text" id="Password" name="Password" placeholder="Enter your Password" required> <br>
-  <label>Gender:</label><br>
-  <input type="radio" id="male" name="Gender" value="male">
-  <label for="male">Male</label>
-  <input type="radio" id="female" name="Gender" value="female">
-  <label for="female">Female</label>
-  <input type="radio" id="others" name="Gender" value="others">
-  <label for="others">Others</label><br>
-  <button type="submit">Register</button>
+  <center><h2>Form in HTML</h2></center>
+  <form>
+  <table>
+  <tr>
+    <td><label for="">Enter your UserName</label></td>
+    <td><input type="text" id="UserName" name="UserName" placeholder="enter your username" required></td>
+  </tr>
+  <tr>
+    <td><label for="">Enter your password</label></td>
+    <td><input type="password" id="password" placeholder="enter yor password"></td>
+  </tr>
+  <tr>
+    <td><label for="email">Enter your Email</label></td>
+    <td><input type="text" id="email" name="email"></td>
+  </tr>
+  <tr>
+    <td><label for="phno">Enter your phone number</label></td>
+    <td><input type="tel" id="phno" name="phno" pattern="[6-9][0-9]{9}"></td>
+  </tr>
+  <tr>
+    <td><label for="pincode">Enter your pincode</label></td>
+    <td><input type="tel" id="pincode" name="pincode" pattern="[0-9]{6}"></td>
+  </tr>
+  <tr>
+    <td><label for="DateOfBirth">Enter your DateOfBirth</label></td>
+    <td><input type="date" id="DateOfBirth" name="DateOfBirth" ></td>
+  </tr>
+  <tr>
+    <td><label for="gender">Choose your Gender</label></td>
+    <td>
+      <input type="radio" id="Female" name="gender">
+      <label for="female">Female</label>
+      <input type="radio" id="male" name="gender">
+      <label for="male">Male</label>
+      <input type="radio" id="other" name="gender">
+      <label type="radio">Other</label>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="">Enter your adhar</label></td>
+    <td><input type="file" id="" name="" accept=".png,.pdf,.docx,.img"></td>
+  </tr>
+  <tr>
+    <td><label for="">Choose your expected salary</label></td>
+  
+     <td><input type="range" name="" id="" min="300000" max="500000" step="25000" oninput="this.nextElementSibling.value=this.value">
+        <output style="position: relative;bottom: 3px;" >300000</output></td>
+  </tr>
+  <tr>
+    <td><label for=""> select your district </label></td>
+    <td>
+      <select name="" id="">
+        <option>Select your district</option>
+        <option>Tirupathur</option>
+        <option>Namakal</option>
+        <option>Salem</option>
+      </select>
+    </td>
+  </tr>
+  
+    <tr>
+      <td><label for="">Select Your Mother Tongue</label></td>
+      <td><input list="langList" name="" id="">
+      
+    <datalist id="langList">
+        <option value="Tamil">Tamil</option>
+        <option value="Malayalam">Malayalam</option>
+        <option value="Telugu">Telugu</option>
+        <option value="Kanada">kanada</option>
+        <option value="Hindi">Hindi</option>
+    </datalist>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="">Feel free to give feedback</label></td>
+      <td>
+        <textarea name="" id="" rows="5" cols="25"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="reset" id="" name="">
+      <input type="submit" id="" name="" value="Register"></td>
+    </tr>
 
-
+  </table>
+</form>
 </body>
 </html>
